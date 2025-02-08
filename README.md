@@ -22,23 +22,23 @@ The Banking Portal API provides a set of endpoints for managing user accounts, f
 ## Deployment steps to OCP
 
 1. We have added Dockerfile please take the latest source code.
-2. create a copy of `application.properties.sample`, rename it `application.properties (Using H2 database)
+2. create a copy of `application.properties.sample`, rename it `application.properties` (Using H2 database)
 
 3. Connect to your OCP cluster either via Web OC CLI or local OC CLI using **copy login command** from right top drop down.
   
 
 4. Once connected navigate to the project space:
-   Run below command :
+   Run below command:
 
-   oc new-app <YOUR_GIT_URL> --name=<YOUR_BACKEND_API_ANME>
+   ```oc new-app <YOUR_GIT_URL> --name=<YOUR_BACKEND_API_ANME>```
 
-   This command will create you buildConfig.yaml, deploymeny.yaml and servive.yaml and deployment should be succesful.
+   This command will create you buildConfig.yaml, deploymeny.yaml and servive.yaml and deployment should be successful.
 
-   buildconfig.yaml	: Builds an image from the source code (Git, Dockerfile, binary).
+   **buildconfig.yaml:** Builds an image from the source code (Git, Dockerfile, binary).
    
-   deployment.yaml : Deploys the built image as a running container in OpenShift.
+   **deployment.yaml:** Deploys the built image as a running container in OpenShift.
    
-   service.yaml	: Exposes the deployment inside OpenShift as a network service.
+   **service.yaml:** Exposes the deployment inside OpenShift as a network service.
 
    
    
